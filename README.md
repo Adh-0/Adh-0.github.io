@@ -17,65 +17,24 @@
 
 ---
 
-### About Me
+I build practical AI systems, mostly around RAG, agentic workflows, and backend engineering.
 
-I build AI systems that are meant to actually work in the real world.
+### What I work with
 
-A lot of my work is around:
-- RAG chatbots
-- Agentic workflows
-- Hybrid search
-- FastAPI backends
-- Local and on-prem LLM deployments
+Python, FastAPI, LangChain, LangGraph, RAG, FAISS, ChromaDB, PostgreSQL, SQLite, Docker.
 
-I like turning messy ideas into clean systems that feel simple on the outside and solid underneath.
+### A few projects
 
----
+- **BDU CIMS** - university chatbot for document-based Q&A
+- **Multi-Agent Researcher** - multi-agent research workflow
+- **AI Resume Tailor** - resume rewriting with structured outputs
 
-### What I'm Into
+### What I care about
 
-- Shipping production-ready LLM apps
-- Designing retrieval pipelines that give better answers
-- Building backend systems with clean architecture
-- Working on privacy-first AI setups
-- Making AI tools that are useful, not just flashy
-
----
-
-### Some Things I've Built
-
-- **BDU CIMS** - a university chatbot that answers student queries from official documents
-- **Multi-Agent Researcher** - a multi-agent research system with self-correction
-- **AI Resume Tailor** - an AI tool that rewrites resumes based on job descriptions
-
----
-
-### Tech I Work With
-
-- Python, Java, SQL
-- FastAPI, Spring Boot, REST APIs, SSE
-- LangChain, LangGraph, RAG
-- FAISS, ChromaDB, BM25, RRF
-- PostgreSQL, SQLite
-- Docker, Git, GitHub Actions, AWS, GCP
-
----
-
-### Currently
-
-- Building AI products end to end
-- Improving retrieval quality and response reliability
-- Exploring smarter agentic systems
-- Working on private, low-dependency AI tools
-
----
-
-### A Bit More
-
-- I like practical systems more than hype
-- I care about clean code and clear results
-- I enjoy solving problems that sit between AI and backend engineering
-- I'm always building something new
+- Useful systems over hype
+- Clean architecture
+- Privacy-first AI
+- Shipping things that work
 
 <p align="center">
   <i>Building useful AI, one system at a time.</i>
