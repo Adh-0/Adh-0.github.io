@@ -1,0 +1,14 @@
+{
+  "name": "Adhitya M R | AI Engineer",
+  "short_name": "Adhitya M R",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#f6f4ee",
+  "background_color": "#f6f4ee",
+  "display": "browser"
+}

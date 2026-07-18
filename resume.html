@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resume of Adhitya M R, AI Engineer, LLM Application Developer, and Backend Engineer.">
+  <meta name="theme-color" content="#f6f4ee">
+  <title>Resume | Adhitya M R</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="Adhitya M R portfolio home">AMR<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="index.html#about">Portfolio</a>
+      <a href="case-study.html">Case study</a>
+      <a class="nav-resume" href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="resume-main shell" id="main">
+    <div class="resume-topline">
+      <div>
+        <p class="eyebrow">Resume</p>
+        <h1 class="resume-name">Adhitya M R</h1>
+        <p class="resume-role">AI Engineer | LLM Application Developer | Backend Engineer</p>
+      </div>
+      <div class="resume-actions">
+        <a class="button button-primary" href="mailto:adhityamr0@gmail.com?subject=Hello%20Adhitya">Email me</a>
+        <button class="button" type="button" data-print-resume>Print or save PDF</button>
+      </div>
+    </div>
+
+    <p class="resume-summary">AI engineer focused on shipping practical LLM systems end to end. I have built a live RAG chatbot for 3,500+ campus users and contributed to private, on-premises LLM automation pipelines. My sweet spot is retrieval, agentic workflows, FastAPI backends, and local deployment.</p>
+
+    <section class="resume-section" aria-labelledby="experience-title">
+      <h2 class="resume-section-title" id="experience-title">Experience</h2>
+      <div class="resume-section-content">
+        <article class="resume-entry">
+          <div class="resume-entry-header"><div><h3>AI Product Development Intern</h3><p class="location">KData Inc. | Toronto, Remote</p></div><time datetime="2026-01/2026-06">Jan 2026 - Jun 2026</time></div>
+          <ul>
+            <li>Evaluated Gemma4, Qwen3, and Llama3 for an LLM test-generation pipeline, refining prompts until the output met production needs.</li>
+            <li>Built Python modules that turn unstructured business requirement documents into API endpoint definitions and test assertions.</li>
+            <li>Validated private-network setup so LLM inference and database work stayed within the on-premises boundary.</li>
+          </ul>
+        </article>
+        <article class="resume-entry">
+          <div class="resume-entry-header"><div><h3>AI Engineer, Production RAG Chatbot</h3><p class="location">Capstone Project</p></div><time datetime="2025-12/2026-04">Dec 2025 - Apr 2026</time></div>
+          <ul>
+            <li>Designed, built, and deployed a campus document assistant from scratch, now serving 3,500+ students and staff.</li>
+            <li>Combined FAISS dense retrieval, BM25 keyword search, and Reciprocal Rank Fusion for stronger context retrieval.</li>
+            <li>Added incremental PDF ingestion, SSE streaming, circuit breakers, anti-hallucination prompting, and XSS sanitization.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="resume-section" aria-labelledby="projects-title">
+      <h2 class="resume-section-title" id="projects-title">Selected projects</h2>
+      <div class="resume-section-content">
+        <article class="resume-entry"><h3>Multi-Agent Researcher</h3><p>A LangGraph research workflow where a Critic scores retrieval quality and can restart search before generation. It streams per-agent status and tokens through FastAPI Server-Sent Events, with a local ChromaDB and SQLite setup.</p></article>
+        <article class="resume-entry"><h3>AI Resume Tailor</h3><p>A structured workflow that extracts job requirements, audits section alignment, and fact-checks generated edits against the original resume before streaming rewrites to the frontend.</p></article>
+      </div>
+    </section>
+
+    <section class="resume-section" aria-labelledby="skills-title">
+      <h2 class="resume-section-title" id="skills-title">Skills</h2>
+      <div class="resume-section-content">
+        <dl class="resume-skills">
+          <div><dt>AI engineering</dt><dd>RAG pipelines, agentic workflows, multi-agent systems, hybrid search, prompt engineering, LLM evaluation, local LLM deployment</dd></div>
+          <div><dt>Frameworks</dt><dd>LangGraph, LangChain, FastAPI, Pydantic, Spring Boot, asyncio, OpenAI API</dd></div>
+          <div><dt>Data</dt><dd>ChromaDB, FAISS, PostgreSQL, SQLite, BM25, vector databases</dd></div>
+          <div><dt>Languages</dt><dd>Python, Java, SQL</dd></div>
+          <div><dt>Infrastructure</dt><dd>Docker, AWS, GCP, GitHub Actions, CI/CD, Git</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="resume-section" aria-labelledby="education-title">
+      <h2 class="resume-section-title" id="education-title">Education</h2>
+      <div class="resume-section-content"><article class="resume-entry"><div class="resume-entry-header"><div><h3>B.Tech, Computer Science Engineering</h3><p class="location">Bharathidasan University | CGPA 7.44</p></div><time datetime="2022-10/2026-04">Oct 2022 - Apr 2026</time></div><p>Certifications: Anthropic Academy Claude and Prompt Engineering, LangChain Academy LangChain and LangGraph, Google Cloud Generative AI Fundamentals.</p></article></div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell"><span>&copy; <span data-year></span> Adhitya M R</span><a href="index.html#contact">Start a conversation</a></footer>
+</body>
+</html>

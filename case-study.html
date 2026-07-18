@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Case study: a production campus RAG assistant built by Adhitya M R.">
+  <meta name="theme-color" content="#f6f4ee">
+  <title>Campus RAG Assistant | Adhitya M R</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="Adhitya M R portfolio home">AMR<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="index.html#about">Portfolio</a>
+      <a href="resume.html">Resume</a>
+      <a class="nav-resume" href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="page-header shell">
+      <p class="breadcrumbs"><a href="index.html">Portfolio</a><span>/</span><span>Case study</span></p>
+      <p class="eyebrow">Production RAG chatbot</p>
+      <h1>A campus RAG assistant built for 3,500+ people.</h1>
+      <p class="page-intro">A production document assistant that retrieves from institutional sources, streams answers in real time, and stays inside the campus infrastructure.</p>
+      <div class="case-facts" aria-label="Project facts">
+        <div><span>Audience</span><strong>3,500+ people</strong></div>
+        <div><span>Runtime</span><strong>Campus servers</strong></div>
+        <div><span>Model boundary</span><strong>No external LLM</strong></div>
+      </div>
+    </header>
+
+    <section class="case-study-section shell" id="overview" aria-labelledby="problem-title">
+      <div class="case-study-grid">
+        <div><p class="eyebrow">01 / The problem</p><h2 id="problem-title">Campus knowledge was there. It just needed a useful front door.</h2></div>
+        <div class="case-body">
+          <p>I built the system from scratch as a capstone project. The goal was simple: let students and staff ask questions in plain language and get grounded answers from institutional documents, without sending that data to an external LLM service.</p>
+          <p>The hard part was making it dependable enough for real use. That meant retrieval had to handle both specific keywords and broader concepts, document updates could not require a full rebuild, and the interface had to show answers as they arrived.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-section shell" aria-labelledby="architecture-title">
+      <div class="case-study-grid">
+        <div><p class="eyebrow">02 / The system</p><h2 id="architecture-title">A retrieval path with a few deliberate guardrails.</h2></div>
+        <div class="architecture" aria-label="Campus RAG system flow">
+          <div class="architecture-step"><span>01 / Ingest</span><strong>PDFs are tracked with SQLite metadata so only new or changed files are indexed.</strong></div>
+          <div class="architecture-step"><span>02 / Retrieve</span><strong>FAISS dense search and BM25 keyword search each return useful context.</strong></div>
+          <div class="architecture-step"><span>03 / Fuse</span><strong>Reciprocal Rank Fusion combines both result sets before generation.</strong></div>
+          <div class="architecture-step"><span>04 / Deliver</span><strong>FastAPI streams tokens through Server-Sent Events to the campus interface.</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-section shell" aria-labelledby="decisions-title">
+      <div class="case-study-grid">
+        <div><p class="eyebrow">03 / Engineering choices</p><h2 id="decisions-title">The small decisions that made it feel production-ready.</h2></div>
+        <div class="decision-list">
+          <article><h3>Hybrid search</h3><p>Dense vectors help with meaning. BM25 helps when users use the exact language found in campus documents. Combining both gave the assistant a more reliable retrieval foundation.</p></article>
+          <article><h3>Incremental updates</h3><p>SQLite-backed file metadata lets the ingestion job target only new or changed PDFs, which keeps ongoing maintenance practical.</p></article>
+          <article><h3>Streaming UX</h3><p>FastAPI Server-Sent Events deliver tokens as the answer is generated, so the interface feels responsive instead of making people wait behind a blank screen.</p></article>
+          <article><h3>Failure handling</h3><p>LLM circuit breakers, anti-hallucination prompts, and XSS sanitization add protection around the parts of an AI product that can otherwise become unpredictable.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study-section shell" aria-labelledby="outcome-title">
+      <div class="case-study-grid">
+        <div><p class="eyebrow">04 / Outcome</p><h2 id="outcome-title">A real deployment, not a one-off demo.</h2></div>
+        <article class="case-outcome">
+          <h3>The assistant is live on campus infrastructure and serves 3,500+ students and staff.</h3>
+          <p>This project brought together the work I enjoy most: retrieval quality, practical backend systems, local AI deployment, and an interface that gives people a clear path to an answer.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell"><span>&copy; <span data-year></span> Adhitya M R</span><a href="index.html#contact">Start a conversation</a></footer>
+</body>
+</html>

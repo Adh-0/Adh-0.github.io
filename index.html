@@ -3,420 +3,213 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Adhitya M R, AI Engineer, LLM Application Developer, and Backend Engineer.">
   <title>Adhitya M R | AI Engineer</title>
-  <meta name="description" content="Academic-style portfolio of Adhitya M R, AI Engineer and Backend Engineer building AI applications, automation workflows, search systems, and FastAPI backends.">
+  <meta name="theme-color" content="#f6f4ee">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="topbar">
-    <a href="#home" class="topbar-brand">Adhitya M R</a>
-    <nav class="topbar-nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#systems">Systems</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#cv">CV</a>
-      <a href="#contact">Contact</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="#home" aria-label="Adhitya M R home">AMR<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="#about" data-section-link>About</a>
+      <a href="#experience" data-section-link>Experience</a>
+      <a href="#projects" data-section-link>Projects</a>
+      <a href="#skills" data-section-link>Skills</a>
+      <a href="#contact" data-section-link>Contact</a>
+      <a class="nav-resume" href="resume.html">Resume</a>
     </nav>
   </header>
 
-  <div class="page-shell" id="home">
-    <aside class="profile-panel" aria-label="Profile">
-      <!-- The new wrapper specifically for handling internal scrolling -->
-      <div class="profile-scroll">
-        <div class="profile-mark" aria-hidden="true">
-          <span>AMR</span>
+  <nav class="section-rail" aria-label="Explore the portfolio">
+    <a href="#home" data-section-link><span>Home</span></a>
+    <a href="#about" data-section-link><span>About</span></a>
+    <a href="#experience" data-section-link><span>Experience</span></a>
+    <a href="#projects" data-section-link><span>Projects</span></a>
+    <a href="#skills" data-section-link><span>Skills</span></a>
+    <a href="#contact" data-section-link><span>Contact</span></a>
+  </nav>
+
+  <main id="main">
+    <section class="hero shell" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">AI Engineer | LLM Application Developer | Backend Engineer</p>
+        <h1 id="hero-title">Adhitya <span class="name-initials">M R</span></h1>
+        <p class="intro">I build AI products that do useful work. Think RAG chatbots, agentic workflows, FastAPI backends, and local LLM systems that keep data where it belongs.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#experience">See the work</a>
+          <a class="text-link" href="https://github.com/Adh-0" target="_blank" rel="noreferrer">GitHub</a>
         </div>
-
-        <p class="profile-kicker">AI Engineer</p>
-        <h1>Adhitya M R</h1>
-        <p class="profile-subtitle">LLM Application Developer / Backend Engineer</p>
-
-        <p class="profile-summary">
-          I build AI applications, backend services, search systems, and automation
-          workflows that are practical enough to ship.
-        </p>
-
-        <div class="profile-status" aria-label="Current status">
-          <span class="status-light"></span>
-          <span>Available for AI/backend roles</span>
+        <div class="jump-links" aria-label="Quick portfolio links">
+          <a href="#projects"><span>01</span>Browse projects</a>
+          <a href="#skills"><span>02</span>See the toolkit</a>
+          <a href="#contact"><span>03</span>Start a conversation</a>
         </div>
-
-        <dl class="profile-facts">
-          <div>
-            <dt>Focus</dt>
-            <dd>AI apps, backend, automation</dd>
-          </div>
-          <div>
-            <dt>Base</dt>
-            <dd>India / remote-friendly</dd>
-          </div>
-        </dl>
-
-        <div class="profile-console" aria-label="Profile build log">
-          <div class="console-bar">
-            <span></span>
-            <span></span>
-            <span></span>
-            <strong>profile.log</strong>
-          </div>
-          <p><span>role</span> AI engineer</p>
-          <p><span>mode</span> build, test, ship</p>
-          <p><span>likes</span> clean APIs + useful AI</p>
-        </div>
-
-        <div class="profile-stack" aria-label="Core stack">
-          <span>Python</span>
-          <span>FastAPI</span>
-          <span>LangGraph</span>
-          <span>SQL</span>
-        </div>
-
-        <div class="profile-actions" aria-label="Quick profile actions">
-          <a href="#contact">Contact</a>
-          <a href="https://github.com/Adh-0" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/adhityamr0" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-
-        <nav class="side-nav" aria-label="Section navigation">
-          <a href="#about">About</a>
-          <a href="#systems">Selected work</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#skills">Skills</a>
-          <a href="#cv">CV</a>
-        </nav>
       </div>
-    </aside>
 
-    <main id="main" class="content">
-      <section class="hero-section" id="about">
-        <p class="section-label">About</p>
-        <h2>AI and backend systems, built with a production mindset.</h2>
-        <p class="lead">
-          I work across LLM apps, backend APIs, document search, automation workflows,
-          streaming interfaces, and the small reliability choices that make software
-          useful in the real world.
-        </p>
-
-        <div class="hero-note">
-          <strong>Working style</strong>
-          <span>Build the system, test the edges, keep the interface calm.</span>
+      <aside class="now-card" aria-label="Currently" data-tilt-card>
+        <div class="card-topline"><span>NOW</span><span class="live-dot" aria-hidden="true"></span></div>
+        <p>Building practical AI systems with clean retrieval, steady backends, and fewer mysterious black boxes.</p>
+        <div class="mini-stack" aria-label="Core technologies">
+          <span>Python</span><span>FastAPI</span><span>LangGraph</span><span>RAG</span>
         </div>
+        <p class="card-footnote">Based in India. Remote friendly.</p>
+      </aside>
+      <a class="scroll-cue" href="#about"><span>Scroll to meet me</span><i aria-hidden="true"></i></a>
+    </section>
 
-        <div class="workbench-strip" aria-label="Engineering workbench">
-          <article>
-            <strong>Prototype</strong>
-            <span>Small loops before big abstractions.</span>
-          </article>
-          <article>
-            <strong>Measure</strong>
-            <span>Check retrieval, latency, and failure cases.</span>
-          </article>
-          <article>
-            <strong>Ship</strong>
-            <span>Make the API and interface feel boring in the best way.</span>
-          </article>
+    <section class="section shell about" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <p class="eyebrow">01 / About</p>
+        <h2 id="about-title">I like making AI feel less vague and more useful.</h2>
+      </div>
+      <div class="about-content">
+        <p>I am a computer science student and AI engineer who has already shipped real systems, including a production campus assistant used by 3,500+ students and staff. I enjoy taking messy documents, unclear requirements, and half-formed ideas, then turning them into software people can actually trust.</p>
+        <ul class="principles" aria-label="Engineering principles">
+          <li><span>01</span> Build the smallest thing that proves the idea.</li>
+          <li><span>02</span> Make the data path easy to inspect.</li>
+          <li><span>03</span> Keep the interface calm, fast, and honest.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section shell experience" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">02 / Experience</p>
+          <h2 id="experience-title">Real AI work, not just demos.</h2>
         </div>
+        <p>I have worked across model evaluation, retrieval, backend APIs, streaming UX, and private deployment.</p>
+      </div>
 
-        <div class="review-guide" aria-label="Suggested review path">
-          <p>Quick read</p>
-          <a href="#systems">Selected work</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Stack overview</a>
-        </div>
-
-        <div class="impact-row" id="impact">
-          <article>
-            <strong>3,500+</strong>
-            <span>campus users served by a live assistant</span>
-          </article>
-          <article>
-            <strong>0</strong>
-            <span>external LLM calls in the campus deployment</span>
-          </article>
-          <article>
-            <strong>2</strong>
-            <span>LangGraph projects with streaming backend flows</span>
-          </article>
-        </div>
-      </section>
-
-      <section class="section research-section">
-        <div class="section-heading">
-          <p class="section-label">Current Focus</p>
-          <h2>What I like working on</h2>
-        </div>
-
-        <div class="focus-grid">
-          <article>
-            <h3>AI applications</h3>
-            <p>LLM features, structured outputs, document workflows, search, and practical automation.</p>
-          </article>
-          <article>
-            <h3>Workflow design</h3>
-            <p>Clear steps, typed state, evaluators, retries, and progress updates that users can follow.</p>
-          </article>
-          <article>
-            <h3>Backend infrastructure</h3>
-            <p>FastAPI services, clean schemas, databases, streaming responses, and deployment-ready APIs.</p>
-          </article>
-        </div>
-
-        <div class="playbook-grid" aria-label="Engineering playbook">
-          <article class="play-card build-loop-card">
-            <p class="mini-label">Build Loop</p>
-            <h3>How I usually move from idea to system</h3>
-            <div class="loop-track">
-              <span>Scope</span>
-              <span>Model</span>
-              <span>Test</span>
-              <span>Ship</span>
-            </div>
-            <p>
-              I like getting a thin version working early, then tightening the parts
-              that matter: data shape, error paths, retrieval quality, and user feedback.
-            </p>
-          </article>
-
-          <article class="play-card notebook-card">
-            <p class="mini-label">Notes</p>
-            <h3>Things I tend to care about</h3>
-            <ul class="note-list">
-              <li>Clear inputs and outputs</li>
-              <li>Typed boundaries between steps</li>
-              <li>Fast feedback while the system thinks</li>
-              <li>Simple deployment stories</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section systems-section" id="systems">
-        <div class="section-heading">
-          <p class="section-label">Selected Work</p>
-          <h2>Things I have deployed, tested, or built end to end.</h2>
-        </div>
-
-        <article class="system-entry">
-          <div class="entry-meta">
-            <span>Production RAG</span>
-            <span>BDU-CIMS</span>
-            <span>Dec 2025 - Apr 2026</span>
-          </div>
-          <h3>Campus document assistant for Bharathidasan University</h3>
-          <p>
-            Sole developer of a live RAG chatbot deployed on campus servers and used
-            by 3,500+ students and staff. The system answers from institutional document
-            data without an external LLM dependency.
-          </p>
-
-          <div class="architecture-board" aria-label="System architecture diagram">
-            <div>
-              <strong>PDF ingest</strong>
-              <small>changed files only</small>
-            </div>
-            <div>
-              <strong>Hybrid search</strong>
-              <small>FAISS + BM25</small>
-            </div>
-            <div>
-              <strong>Fusion</strong>
-              <small>RRF ranking</small>
-            </div>
-            <div>
-              <strong>Response API</strong>
-              <small>SSE stream</small>
-            </div>
-          </div>
-
-          <ul class="clean-list">
-            <li>Built incremental document indexing with SQLite-backed file metadata.</li>
-            <li>Combined dense vector search and keyword search through Reciprocal Rank Fusion.</li>
-            <li>Streamed token output with FastAPI Server-Sent Events.</li>
-            <li>Added anti-hallucination prompts, circuit breakers, and XSS sanitization.</li>
+      <div class="experience-list">
+        <article class="timeline-card reveal">
+          <p class="role-meta">KData Inc., Toronto Remote | Jan 2026 - Jun 2026</p>
+          <h3>AI Product Development Intern</h3>
+          <p>I worked on an on-premises LLM test-generation pipeline that turns business requirement documents into structured API definitions and test assertions.</p>
+          <ul class="detail-list">
+            <li>Evaluated Gemma4, Qwen3, and Llama3 against expected test structures and tuned prompts until the output matched production needs.</li>
+            <li>Built Python modules that parse unstructured BRDs into endpoint definitions and test assertions for the code generation pipeline.</li>
+            <li>Validated private-network deployment settings so inference and database operations stayed inside the on-prem boundary.</li>
+            <li>Tested the full flow across different BRD formats and surfaced parsing edge cases before they reached users.</li>
           </ul>
-
-          <div class="tag-row">
-            <span>RAG</span>
-            <span>FAISS</span>
-            <span>BM25</span>
-            <span>FastAPI</span>
-            <span>SQLite</span>
-            <span>SSE</span>
-            <span>Local LLM</span>
-          </div>
+          <div class="tags"><span>Python</span><span>Local LLMs</span><span>Prompting</span><span>Parsing</span></div>
         </article>
 
-        <article class="system-entry">
-          <div class="entry-meta">
-            <span>Enterprise AI</span>
-            <span>KData Inc.</span>
-            <span>Jan 2026 - Jun 2026</span>
-          </div>
-          <h3>On-prem LLM pipeline for I-QA test generation</h3>
-          <p>
-            Worked on an automation pipeline at a Toronto-based AI company, focusing
-            on LLM evaluation, BRD parsing, endpoint extraction, and test assertion generation.
-          </p>
-
-          <ul class="clean-list">
-            <li>Evaluated Gemma4, Qwen3, and Llama3 against expected test structures.</li>
-            <li>Built Python modules for parsing unstructured BRDs into structured API definitions.</li>
-            <li>Validated environment configuration so data stayed inside the network boundary.</li>
+        <article class="timeline-card timeline-card-alt reveal">
+          <p class="role-meta">Capstone Project | Dec 2025 - Apr 2026</p>
+          <h3>AI Engineer, Production RAG Chatbot</h3>
+          <p>I designed, built, and deployed a live campus document assistant from scratch. It runs on institutional infrastructure and answers from campus documents without using an external LLM dependency.</p>
+          <ul class="detail-list">
+            <li>Serves 3,500+ students and staff through a production RAG system hosted on campus servers.</li>
+            <li>Combined FAISS dense search with BM25 keyword search, then fused results with Reciprocal Rank Fusion for stronger context retrieval.</li>
+            <li>Built incremental PDF ingestion with SQLite file metadata so only new or changed documents are indexed.</li>
+            <li>Added FastAPI Server-Sent Events, LLM circuit breakers, anti-hallucination prompting, and XSS sanitization.</li>
           </ul>
-
-          <div class="tag-row">
-            <span>Python</span>
-            <span>Local LLMs</span>
-            <span>BRD parsing</span>
-            <span>Prompting</span>
-          </div>
+          <div class="tags"><span>RAG</span><span>FAISS</span><span>BM25</span><span>FastAPI</span><span>SSE</span></div>
+          <a class="case-link" href="case-study.html">Read the case study <span aria-hidden="true">-&gt;</span></a>
         </article>
-      </section>
+      </div>
+    </section>
 
-      <section class="section projects-section" id="projects">
-        <div class="section-heading">
-          <p class="section-label">Portfolio</p>
-          <h2>Projects with clear engineering notes.</h2>
-        </div>
-
-        <div class="publication-list">
-          <article>
-            <p class="pub-type">Project / Multi-agent research workflow</p>
+    <section class="section shell projects" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="eyebrow">03 / Projects</p>
+        <h2 id="projects-title">A few builds I am proud of.</h2>
+      </div>
+      <div class="project-list">
+        <article class="project-row reveal">
+          <span class="project-number">01</span>
+          <div>
             <h3>Multi-Agent Researcher</h3>
-            <p>
-              A LangGraph application with a Critic node that checks retrieval quality
-              and can re-run search before generation. Built with ChromaDB, SQLite,
-              FastAPI, and streamed agent status.
-            </p>
-            <div class="pub-footer">
-              <span>Python / FastAPI / LangGraph / ChromaDB</span>
-              <a href="https://github.com/Adh-0/MultiAgent_Researcher.git" target="_blank" rel="noreferrer">Repository</a>
-            </div>
-          </article>
-
-          <article>
-            <p class="pub-type">Project / Resume alignment workflow</p>
+            <p>A LangGraph research workflow where a Critic checks retrieval quality and can send the system back to search again before the answer is generated.</p>
+          </div>
+          <p class="project-stack">LangGraph, LangChain, FastAPI, ChromaDB, SQLite</p>
+          <a href="https://github.com/Adh-0/MultiAgent_Researcher" target="_blank" rel="noreferrer" aria-label="View Multi-Agent Researcher repository">Go</a>
+        </article>
+        <article class="project-row reveal">
+          <span class="project-number">02</span>
+          <div>
             <h3>AI Resume Tailor</h3>
-            <p>
-              A three-node agent workflow where an Extractor parses job requirements,
-              an Auditor scores resume alignment, and a Fact-Checker validates edits
-              against the source resume before output.
-            </p>
-            <div class="pub-footer">
-              <span>LangGraph / FastAPI / React / Pydantic</span>
-              <a href="https://github.com/Adh-0/Resume_Tailor" target="_blank" rel="noreferrer">Repository</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section experience-section" id="experience">
-        <div class="section-heading">
-          <p class="section-label">Experience</p>
-          <h2>Recent roles</h2>
-        </div>
-
-        <div class="timeline">
-          <article>
-            <time>Jan 2026 - Jun 2026</time>
-            <h3>AI Product Development Intern</h3>
-            <p class="place">KData Inc., Toronto (Remote)</p>
-            <p>
-              Worked on LLM selection, BRD parsing, test-generation pipeline validation,
-              and on-prem environment setup.
-            </p>
-          </article>
-
-          <article>
-            <time>Dec 2025 - Apr 2026</time>
-            <!-- The Capstone Project note is added here to preserve the structural timeline -->
-            <h3>AI Engineer (Capstone Project)</h3>
-            <p class="place">BDU-CIMS, Bharathidasan University</p>
-            <p>
-              Designed, built, and deployed a production assistant across ingestion,
-              retrieval, streaming, local inference, and system hardening.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section skills-section" id="skills">
-        <div class="section-heading">
-          <p class="section-label">Skills</p>
-          <h2>Tools and systems</h2>
-        </div>
-
-        <div class="skills-table">
-          <div>
-            <strong>Languages</strong>
-            <span>Python, Java, SQL</span>
+            <p>A resume workflow that extracts job requirements, audits resume fit, and fact-checks every suggested edit against the original resume.</p>
           </div>
-          <div>
-            <strong>AI / LLM</strong>
-            <span>LangGraph, LangChain, RAG, agent workflows, FAISS, ChromaDB, OpenAI API, Ollama, Gemma, Llama, Qwen</span>
+          <p class="project-stack">LangGraph, FastAPI, React, Pydantic</p>
+          <a href="https://github.com/Adh-0/Resume_Tailor" target="_blank" rel="noreferrer" aria-label="View AI Resume Tailor repository">Go</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell skills" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading">
+        <p class="eyebrow">04 / Skills</p>
+        <h2 id="skills-title">The toolkit I reach for.</h2>
+      </div>
+      <div class="toolkit-grid">
+        <div><strong>AI Engineering</strong><span>RAG pipelines, agentic workflows, multi-agent systems, hybrid search, prompt engineering, LLM evaluation, local LLM deployment</span></div>
+        <div><strong>Frameworks</strong><span>LangGraph, LangChain, FastAPI, Pydantic, Spring Boot, asyncio, OpenAI API</span></div>
+        <div><strong>Data</strong><span>ChromaDB, FAISS, PostgreSQL, SQLite, BM25, vector databases</span></div>
+        <div><strong>Languages</strong><span>Python, Java, SQL</span></div>
+        <div><strong>Infrastructure</strong><span>Docker, AWS, GCP, GitHub Actions, CI/CD, Git</span></div>
+        <div><strong>Certifications</strong><span>Anthropic Academy, LangChain Academy, Google Cloud Generative AI Fundamentals</span></div>
+      </div>
+
+      <div class="credentials-grid">
+        <article class="credential-card reveal">
+          <p class="card-label">Education</p>
+          <h3>B.Tech, Computer Science Engineering</h3>
+          <p>Bharathidasan University | CGPA 7.44 | Oct 2022 - Apr 2026</p>
+        </article>
+        <article class="credential-card reveal">
+          <p class="card-label">Focus</p>
+          <h3>AI systems that can be inspected</h3>
+          <p>I care about retrieval quality, typed outputs, failure handling, and interfaces that show what the system is doing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact shell" id="contact" aria-labelledby="contact-title">
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow">05 / Let us talk</p>
+          <h2 id="contact-title">Have a tricky problem worth untangling?</h2>
+          <p>Whether you are shaping an AI product, improving a backend, or looking for someone who can turn a fuzzy idea into a working system, I would love to hear the context.</p>
+          <ul class="contact-notes">
+            <li><span>01</span> A real use case beats a long intro.</li>
+            <li><span>02</span> Tell me what is not working yet.</li>
+            <li><span>03</span> I am open to product work, collaboration, and early-career roles.</li>
+          </ul>
+        </div>
+
+        <aside class="contact-starter reveal" aria-labelledby="starter-title">
+          <p class="card-label">Conversation starter</p>
+          <h3 id="starter-title">Pick a direction. I will tee up the first message.</h3>
+          <div class="topic-picker" role="group" aria-label="Choose a conversation topic">
+            <button type="button" class="topic-button is-selected" aria-pressed="true" data-contact-topic data-subject="LLM or RAG product" data-message="Hi Adhitya, I saw your portfolio and would like to talk about an LLM or RAG product.">LLM or RAG product</button>
+            <button type="button" class="topic-button" aria-pressed="false" data-contact-topic data-subject="Backend system" data-message="Hi Adhitya, I saw your portfolio and would like to talk about a backend system.">Backend system</button>
+            <button type="button" class="topic-button" aria-pressed="false" data-contact-topic data-subject="AI evaluation or workflow" data-message="Hi Adhitya, I saw your portfolio and would like to talk about AI evaluation or an agentic workflow.">Evaluation or agents</button>
+            <button type="button" class="topic-button" aria-pressed="false" data-contact-topic data-subject="Career opportunity" data-message="Hi Adhitya, I saw your portfolio and would like to discuss a role or collaboration.">Role or collaboration</button>
           </div>
-          <div>
-            <strong>Backend</strong>
-            <span>FastAPI, Spring Boot, REST APIs, asyncio, Server-Sent Events, Pydantic, PostgreSQL, SQLite</span>
+          <p class="contact-status" data-contact-status aria-live="polite">Ready to talk about an LLM or RAG product.</p>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:adhityamr0@gmail.com?subject=LLM%20or%20RAG%20product&amp;body=Hi%20Adhitya%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20an%20LLM%20or%20RAG%20product." data-email-contact>Email me</a>
+            <a class="button button-whatsapp" href="https://wa.me/919940582355?text=Hi%20Adhitya%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20an%20LLM%20or%20RAG%20product." target="_blank" rel="noreferrer" data-whatsapp>
+              <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a12.9 12.9 0 0 0-11.1 19.5L3 29l6.7-1.8A13 13 0 1 0 16 3Zm0 23.7a10.7 10.7 0 0 1-5.5-1.5l-.4-.2-4 1.1 1.1-3.9-.3-.4A10.7 10.7 0 1 1 16 26.7Zm5.9-8c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1a8.7 8.7 0 0 1-2.5-1.5 9.2 9.2 0 0 1-1.7-2.1c-.2-.3 0-.4.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-1-2.3c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.4 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2.1-1.3.3-.6.3-1.2.2-1.3-.1-.2-.3-.3-.6-.5Z"/></svg>
+              WhatsApp
+            </a>
           </div>
-          <div>
-            <strong>DevOps</strong>
-            <span>Docker, AWS, GCP, GitHub Actions, Git, CI/CD</span>
-          </div>
-        </div>
-      </section>
+          <p class="contact-footnote">No forms and no hoops. Just a clear way to start.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
 
-      <section class="section cv-section" id="cv">
-        <div class="section-heading">
-          <p class="section-label">CV</p>
-          <h2>Education and certifications</h2>
-        </div>
-
-        <div class="cv-grid">
-          <article>
-            <h3>B.Tech, Computer Science Engineering</h3>
-            <p>Bharathidasan University</p>
-            <p>CGPA: 7.5 / Oct 2022 - Apr 2026</p>
-          </article>
-
-          <article>
-            <h3>Certifications</h3>
-            <ul class="plain-list">
-              <li>Anthropic Academy: Claude and Prompt Engineering</li>
-              <li>LangChain Academy: LangChain and LangGraph</li>
-              <li>Google Cloud: Generative AI Fundamentals</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="section-heading">
-          <p class="section-label">Contact</p>
-          <h2>Open to practical engineering work.</h2>
-        </div>
-
-        <div class="contact-box">
-          <p>
-            I am interested in AI engineering, backend engineering, and product-minded
-            roles where shipping reliable systems matters.
-          </p>
-          <div>
-            <a class="primary-contact" href="mailto:adhityamr0@gmail.com?subject=AI%20Engineering%20Opportunity">adhityamr0@gmail.com</a>
-            <a href="tel:+919940582355">+91 99405 82355</a>
-          </div>
-        </div>
-      </section>
-
-      <footer class="site-footer">
-        <a href="#home">Back to top</a>
-      </footer>
-    </main>
-  </div>
+  <footer class="site-footer shell"><span>&copy; <span data-year></span> Adhitya M R</span><a href="#home">Back to top</a></footer>
+  <div class="toast" role="status" aria-live="polite">Opening WhatsApp...</div>
 </body>
 </html>
