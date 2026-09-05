@@ -27,7 +27,7 @@ Python, FastAPI, LangChain, LangGraph, RAG, FAISS, ChromaDB, PostgreSQL, SQLite,
 
 - **BDU CIMS** - university chatbot for document-based Q&A
 - **Multi-Agent Researcher** - multi-agent research workflow
-- **AI Resume Tailor** - resume rewriting with structured outputs
+- **Sales Call Intelligence** - transcript analysis, quality scoring, issue flags, and coaching workflows
 
 ### What I care about
 
